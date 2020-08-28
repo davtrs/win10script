@@ -30,7 +30,7 @@ $tweaks = @(
 	"RequireAdmin",
 
 	### External Program Setup
-	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
+	"InstallReqProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
 	"InstallAdobe",
 	"Install7Zip",
 	"InstallNotepadplusplus",
@@ -190,7 +190,7 @@ $tweaks = @(
 # Recommended Titus Programs
 #########
 
-Function InstallTitusProgs {
+Function InstallReqProgs {
 	Write-Output "Installing Chocolatey"
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 	choco install chocolatey-core.extension -y
@@ -224,6 +224,120 @@ Function InstallNotepadplusplus {
 Function InstallMediaPlayerClassic {
 	Write-Output "Installing Media Player Classic (VLC Alternative)"
 	choco install mpc-hc -y
+}
+
+Function InstallFirefox {
+	Write-Output "Installing Firefox"
+	choco install firefox -y
+}
+
+Function InstallGit {
+	Write-Output "Installing git"
+	choco install git -y
+}
+
+Function InstallVSCode {
+	Write-Output "Installing Visual Studio Code"
+	choco install vscode -y
+}
+
+Function InstallSteam {
+	Write-Output "Installing Steam"
+	choco install steam -y
+}
+
+Function InstallTeamspeak {
+	Write-Output "Installing Teamspeak"
+	choco install teamspeak -y
+}
+
+Function InstallSpotify {
+	Write-Output "Installing Spotify"
+	choco install spotify -y
+}
+
+Function InstallMinGW {
+	Write-Output "Installing MinGW"
+	choco install mingw -y
+}
+
+Function InstallMalwarebytes {
+	Write-Output "Installing Malwarebytes"
+	choco install malwarebytes -y
+}
+
+Function InstallWindowsTerminal {
+	Write-Output "Installing Windows Terminal"
+	choco install microsoft-windows-terminal -y
+}
+
+Function InstallVLC {
+	Write-Output "Installing VLC Player"
+	choco install vlc -y
+}
+
+Function InstallTeamviewer {
+	Write-Output "Installing Teamviewer"
+	choco install teamviewer -y
+}
+
+Function InstallInkscape {
+	Write-Output "Installing Inkscape"
+	choco install inkscape -y
+}
+
+Function InstallInkscape {
+	Write-Output "Installing Inkscape"
+	choco install inkscape -y
+}
+
+Function InstallHWiNFO {
+	Write-Output "Installing HWiNFO"
+	choco install hwinfo -y
+}
+
+Function InstallCPUZ {
+	Write-Output "Installing CPU-Z"
+	choco install cpu-z -y
+}
+
+Function InstallPowertoys {
+	Write-Output "Installing Powertoys"
+	choco install powertoys -y
+}
+
+Function InstallPaintNET {
+	Write-Output "Installing Paint.NET"
+	choco install paint.net -y
+}
+
+Function InstallSysinternals {
+	Write-Output "Installing Sysinternals"
+	choco install sysinternals -y
+}
+
+Function InstallPoshgit {
+	Write-Output "Installing posh-git"
+	choco install poshgit -y
+}
+
+Function InstallOhMyPosh {
+	Write-Output "Installing oh-my-posh"
+	choco install oh-my-posh -y
+}
+
+Function InstallCascadiaNerdFont {
+	Write-Output "Installing Cascadia Nerd Font"
+	choco install cascadia-code-nerd-font -y
+}
+
+Function InstallGimp {
+	Write-Output "Installing Gimp"
+	choco install gimp -y
+}
+Function InstallScreenToGif {
+	Write-Output "ScreenToGif"
+	choco install screentogif -y
 }
 
 ##########
