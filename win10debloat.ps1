@@ -30,7 +30,7 @@ $tweaks = @(
 	"RequireAdmin",
 
 	### External Program Setup
-	"InstallReqProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
+	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
 	"InstallAdobe",
 	"Install7Zip",
 	"InstallNotepadplusplus",
@@ -190,7 +190,7 @@ $tweaks = @(
 # Recommended Titus Programs
 #########
 
-Function InstallReqProgs {
+Function InstallTitusProgs {
 	Write-Output "Installing Chocolatey"
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 	choco install chocolatey-core.extension -y
@@ -2589,6 +2589,15 @@ Function EnableDarkMode {
 Function DisableDarkMode {
     Write-Output "Disabling Dark Mode"
 	Remove-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme
+}
+
+##########
+# dav Additions
+##########
+
+Function InstallVSCodeExt {
+	Write-Output "Installing VSCode extentions from gist"
+	iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JULOY'))
 }
 
 ##########

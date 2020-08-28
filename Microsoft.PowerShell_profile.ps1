@@ -27,3 +27,6 @@ function com {
 function gpsh {
 	git push
 }
+function gcl {
+	git clone $args
+}
