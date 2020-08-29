@@ -35,6 +35,8 @@ $tweaks = @(
 	"Install7Zip",
 	"InstallNotepadplusplus",
 	"InstallMediaPlayerClassic",
+	"InstallFirefox",
+	"InstalGit",
 
 	### Windows Apps
 	"DebloatAll",
@@ -335,10 +337,28 @@ Function InstallGimp {
 	Write-Output "Installing Gimp"
 	choco install gimp -y
 }
+
 Function InstallScreenToGif {
-	Write-Output "ScreenToGif"
+	Write-Output "Installing ScreenToGif"
 	choco install screentogif -y
 }
+
+Function InstallOffice365E {
+	Write-Output "Installing Microsoft Office 365 Business"
+	choco install office365business -y
+}
+
+Function InstallOffice2019ProPlus {
+	Write-Output "Installing Microsoft Office 2019 Pro Plus"
+	choco install office2019proplus --params '/Language:de-de' -y
+}
+
+Function InstallRedditWallpaperChanger {
+	Write-Output "Installing Reddit Wallpaper Changer"
+	choco install reddit-wallpaper-changer -y
+}
+
+
 
 ##########
 # Privacy Tweaks
