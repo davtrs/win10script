@@ -31,12 +31,49 @@ $tweaks = @(
 
 	### External Program Setup
 	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
-	"InstallAdobe",
+
+	### Essentials
 	"Install7Zip",
-	"InstallNotepadplusplus",
-	"InstallMediaPlayerClassic",
+	"InstallAdobe",
 	"InstallFirefox",
+
+	### Media
+	"InstallMediaPlayerClassic",
+	"InstallVLC",
+	"InstallSpotify",
+	"InstallVirtualDub",
+
+	### Utilities
+	"InstallNotepadplusplus",
+	"InstallHWiNFO",
+	"InstallCPUZ",
+	"InstallPowertoys",
+	"InstallSysinternals",
+	"InstallCascadiaNerdFont",
+	"InstallRedditWallpaperChanger",
+	"InstallMalwarebytes",
+	"InstallTeamviewer",
+
+	### Dev
+	"InstallMinGW ",
+	"InstallWindowsTerminal",
 	"InstalGit",
+	"InstallVSCode",
+	"InstallPoshgit",
+	"InstallOhMyPosh",
+
+	### Gaming
+	"InstallSteam ",
+	"InstallTeamspeak ",
+
+	### Editing
+	"InstallInkscape",
+	"InstallPaintNET",
+	"InstallGimp",
+	"InstallScreenToGif",
+	"InstallOffice365E",
+	"InstallOffice2019ProPlus",
+	"InstallPandoc",
 
 	### Windows Apps
 	"DebloatAll",
@@ -288,11 +325,6 @@ Function InstallInkscape {
 	choco install inkscape -y
 }
 
-Function InstallInkscape {
-	Write-Output "Installing Inkscape"
-	choco install inkscape -y
-}
-
 Function InstallHWiNFO {
 	Write-Output "Installing HWiNFO"
 	choco install hwinfo -y
@@ -356,6 +388,16 @@ Function InstallOffice2019ProPlus {
 Function InstallRedditWallpaperChanger {
 	Write-Output "Installing Reddit Wallpaper Changer"
 	choco install reddit-wallpaper-changer -y
+}
+
+Function InstallVirtualDub {
+	Write-Output "Installing VirtualDub"
+	choco install virtualdub -y
+}
+
+Function InstallPandoc {
+	Write-Output "Installing Pandoc"
+	choco install pandoc -y
 }
 
 
