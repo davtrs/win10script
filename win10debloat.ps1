@@ -36,6 +36,7 @@ $tweaks = @(
 	"Install7Zip",
 	"InstallAdobe",
 	"InstallFirefox",
+	"InstallChocolateyGUI",
 
 	### Media
 	"InstallMediaPlayerClassic",
@@ -81,7 +82,7 @@ $tweaks = @(
 	### Privacy Tweaks ###
 	"DisableTelemetry",             # "EnableTelemetry",
 	"DisableWiFiSense",             # "EnableWiFiSense",
-	"DisableSmartScreen",         # "EnableSmartScreen",
+	"DisableSmartScreen",         	# "EnableSmartScreen",
 	"DisableWebSearch",             # "EnableWebSearch",
 	"DisableAppSuggestions",        # "EnableAppSuggestions",
 	"DisableActivityHistory",       # "EnableActivityHistory",
@@ -93,7 +94,7 @@ $tweaks = @(
 	"DisableAdvertisingID",         # "EnableAdvertisingID",
 	"DisableCortana",               # "EnableCortana",
 	"DisableErrorReporting",        # "EnableErrorReporting",
-	"SetP2PUpdateLocal",          # "SetP2PUpdateInternet",
+	"SetP2PUpdateLocal",          	# "SetP2PUpdateInternet",
 	"DisableDiagTrack",             # "EnableDiagTrack",
 	"DisableWAPPush",               # "EnableWAPPush",
 
@@ -400,7 +401,10 @@ Function InstallPandoc {
 	choco install pandoc -y
 }
 
-
+Function InstallChocolateyGUI {
+	Write-Output "Installing Chocolatey GUI"
+	choco install chocolateygui -y
+}
 
 ##########
 # Privacy Tweaks
